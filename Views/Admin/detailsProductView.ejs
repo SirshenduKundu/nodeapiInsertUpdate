@@ -1,0 +1,45 @@
+
+<%- include('../Includes/header.ejs')%>
+
+</head>
+<body class="viewbody" >
+   <%- include('../Includes/navigation.ejs')%>
+
+   
+    <div class="container"> 
+ <h1> All Product</h1>
+   <% if( form_value.length>0)
+    {%>
+        <table class="table table-hover">  
+            <tr>
+                 <!-- <th>Product ID:-</th> -->
+                 <th>Product Image:-</th>
+                <th>Product Name:-</th>
+                <th>product Price:-</th>
+                <th>Product Description:-</th>
+                <th class="action">Action:-</th>
+                </tr>
+<%for (let value of form_value) {%>
+    
+  <tr>
+  <td ><%= value.productImage %></td>
+<td><%= value.productName %></td>
+<td><%= value.productPrice %></td>
+<td><%= value.productDescription %></td>
+<td class="action"> 
+<a href="/adminProductEdit/<%= value._id%>"><button type="button" class="btn btn-warning" ><i class="fas fa-edit"></i> Edit</button></a>
+<a href="/adminDeleteProduct/<%= value._id%>"><button type="button" class="btn btn-danger" ><i class="fas fa-trash-alt"></i> Delete</button></a>
+<!-- <form method="POST" action="/postdeletevalues">
+    <input type="hidden" name="productid" value="<%= value._id%>">
+    <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete Post</button>
+</form> -->
+</td>
+    </tr>
+        <%}%>
+</table>
+    <%}
+    else{%>
+        <h1>data not found</h1>
+    <%}%>
+</div>
+    <%- include('../Includes/footer.ejs')%>

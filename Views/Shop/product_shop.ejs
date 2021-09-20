@@ -1,0 +1,46 @@
+<%- include('../Includes/header.ejs') %>
+<link rel="stylesheet" type="text/css" href="/CSS/product_shop.css">
+    <title><%= title%></title>
+
+</head>
+<body>
+<%- include('../Includes/navigation.ejs')%>
+
+<div class="container"> 
+  <form class="d-flex" method="POST" action="/postsearch">
+    <input class="form-control me-2" type="search" placeholder="Search" name="Search">
+    <input type="hidden" class="form-control" name="_csrf" value="<%=csrfToken%>">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>  
+ 
+<% if( shop_value.length>0)
+{%>
+                <div class="row">
+                <%for (let value of shop_value) {%> 
+                <div class=" col-md-4 col-lg-4" >
+                  <div class="card" style="width:20rem; height:100;">
+                            <img src="<%= value.productImage%>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h1 class="card-title"> <%= value.productName %></h1>
+                              <h6 class="card-subtitle mb-2 text-muted">Price:- <%= value.productPrice%></h6>
+                              <p class="card-text"><%= value.productDescription%></p>
+                              
+                      <a href="/shopProductView/<%=value._id%>" class="btn btn-primary">View Details</a>
+                            </div>
+                          </div>
+                     </div>
+                     <%}%>
+                </div>
+        
+        
+        <%}
+  
+    else{%>
+        <h1>data not found</h1>
+    <%}%>
+</div>  
+
+
+
+
+<%- include('../Includes/footer.ejs')%>

@@ -1,0 +1,55 @@
+<%- include('../Includes/header.ejs')%>
+    <link rel="stylesheet" type="text/css" href="/CSS/adminEdit.css">
+    </head>
+
+    <body>
+        <%- include('../Includes/navigation.ejs')%>
+
+    <div class="form-body">
+    <div class="row">
+    <div class="form-holder">
+ <div class="form-content">
+<div class="form-items">
+  <h1>Fill in the Value for Edit </h1>
+    <form class="requires-validation" method="POST" action="/posteditvalues">
+
+<div class="col-md-12">
+ <input class="form-control" type="text" name="productName" value="<%=editValue.productName%>" placeholder="Edit Your Product Name"required>
+</div>
+<!-- value field tar kaj holo sudhu matra puraton value guloke pabar jonno, ebar value gulo ke dekhanor jonno ekta Object dorkar-->
+
+<div class="col-md-12">
+    <input class="form-control" type="text" name="productPrice" value="<%=editValue.productPrice%>" placeholder="Edit Your Product Price" required>
+
+ </div>
+
+ <div class="col-md-12">
+     <input class="form-control" type="text"  name="productdescription" value="<%=editValue.productDescription%>" placeholder="Edit Your Product Description" required>
+    
+ </div>
+ <div class="col-md-12">
+    <input class="form-control" type="hidden"  name="productid" value="<%=editValue._id%>" placeholder="Edit Your Product Description" required>
+   
+</div>
+<div class="col-md-12">
+    <input type="hidden" class="form-control" name="_csrf" value="<%=csrfToken%>">
+</div>
+
+<!-- <div class="form-check">
+<input class="form-check-input" type="checkbox" value="" id="invalidCheck"required>
+<label class="form-check-label">I confirm that all data are correct</label>
+ </div> -->
+
+
+<div class="form-button mt-3">
+<center><button id="submit" type="submit" class="btn btn-primary">Update</button></center>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+            <%- include('../Includes/footer.ejs')%>

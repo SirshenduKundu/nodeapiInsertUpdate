@@ -1,0 +1,91 @@
+/* NAVIGATION BAR CSS */
+.navbar{
+    height: 70PX;
+  
+    /* overflow: hidden;
+    background-color: rgb(255, 255, 255);
+     position: fixed;
+     top: 0;
+    width: 100%; */
+}
+.active{
+    background-color: rgb(0, 128, 255);
+    font-family: 'MonteCarlo', cursive;
+}
+
+body{
+    /* background: linear-gradient(to left, #ff0404 20%, #e5ff00 100%); */
+    /* background-image:url('https://i.ytimg.com/vi/vthaBJaTWcE/maxresdefault.jpg'); */
+    background:linear-gradient(to top, rgba(100,50,50,0.6), rgba(0,0,0,0.8)),url(https://www.atrafloor.com/app/uploads/2017/01/camo-camouflage-pattern-flooring-grey.jpg);
+  /* background-size:cover; */
+/* min-height:100vh; */
+
+   
+    
+   
+   
+}
+h1{
+    text-shadow: 4px 4px 4px rgb(255, 255, 255);
+    text-align: center;
+     margin-top:20px;
+   
+    color: rgb(0, 0, 0);
+    font-family: 'MonteCarlo', cursive;
+}
+.bodyform{
+    background-color: #dddcdc;
+    border-radius: 20px;
+    margin-left: 28%;
+    margin-right: 28%;
+     text-align: center;
+    /* margin: auto; */
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding: 20px;
+   
+}
+
+label.form-label{
+    color:  rgb(0, 60, 255);
+    font-weight: bold;
+    text-shadow: 2px 4px 4px rgb(26, 221, 0);  
+}
+.form-control{
+    text-align: left;
+    border: 2px solid rgb(0, 0, 0);
+   border-radius: 15px;
+  
+}
+.btn-primary{
+    background-color: #02cafc;
+    color: rgb(12, 12, 12);
+    /* padding: 14px 20px;
+    margin: 12px;
+    margin-left: 35%;
+    margin-right: 35%; */
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+
+}
+/* detailsproductviewpage css */
+.viewbody{
+    background: linear-gradient(to left, #520a36 20%, #fa6551 100%);
+}
+table.table-hover{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-weight: bold;
+    background-color: #ffffff;
+     border: 2px solid black;
+     }
+.action{
+  text-align:center ;
+}
+table.table-hover th
+{
+background-color: rgb(0, 174, 255);
+}
+/* ----------------------------------------------------- */
