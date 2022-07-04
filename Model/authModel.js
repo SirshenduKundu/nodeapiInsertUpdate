@@ -1,21 +1,28 @@
-const mongoose=require('mongoose');
-const schemaVariable=mongoose.Schema;
-const LoginSchema=new schemaVariable({
+const mongoose = require('mongoose');
+const schemaVariable = mongoose.Schema;
+const UserSchema = new schemaVariable({
 
-    firstName:{
-        type:String,
-        required:true
+    
+    name: {
+        type: String,
+        required: true
     },
-    lastName:{
-        type:String,
-        required:true
+    emailId: {
+        type: String,
+        required: true
     },
-    emailId:{type:String,
-             required:true
+    phone: {
+        type: Number,
+        required: true
     },
-    password:{type:String,
-              required:true
+    password: {
+        type: String,
+        required: true
+    },
+    profileImage:{
+             type:String,
+            required:true
             }
 
 })
-module.exports=mongoose.model('Registration',LoginSchema);
+module.exports = mongoose.model('User', UserSchema);
